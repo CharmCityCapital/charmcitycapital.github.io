@@ -1,0 +1,133 @@
+/* Global styles */
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #FFD700;
+    text-align: center;
+    border: 3px solid #FFD700;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border: none;
+}
+
+p {
+    font-family: 'Baskerville', serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+
+.bottom-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px;
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+
+.disclosure {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    .bottom-left, .bottom-right, .bottom-center {
+        font-size: 0.6em;
+    }
+}
+
+/* Bullet List Styles */
+
+.bullet-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 100px;
+}
+
+.bullet-list {
+    font-family: 'Baskerville', serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+.left {
+    list-style-type: disc;
+    margin-right: 50px;
+}
+
+.right {
+    list-style-type: circle;
+    margin-left: 50px;
+}
+
+/* List Styles */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    margin: 10px;
+    font-family: 'Baskerville', serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+.left-list {
+    flex: 1;
+    border-right: 1px solid #FFD700;
+    padding-right: 20px;
+}
+
+.right-list {
+    flex: 1;
+    padding-left: 20px;
+}
