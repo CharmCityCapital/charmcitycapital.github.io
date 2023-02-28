@@ -1,5 +1,5 @@
-const stockTicker = document.getElementById("stock-ticker");
-const cryptoTicker = document.getElementById("crypto-ticker");
+const stockTicker = document.getElementById("ticker");
+const cryptoTicker = document.getElementById("ticker");
 
 function updateTicker() {
   // Fetch stock data using yfinance
