@@ -84,60 +84,22 @@ p {
   .bottom-center {
     font-size: 0.6em;
   }
-}
-
-.bullet-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px 100px;
-}
-
-.bullet-list {
-  font-family: 'Baskerville', serif;
-  font-size: 1.2em;
-  color: #ffffff;
-}
-
-.left,
-.right {
-  margin: 0;
-  padding: 0;
-  font-family: 'Baskerville', serif;
-  font-size: 1.2em;
-  color: #ffd700;
-}
-
-.left {
-  list-style-type: disc;
-  margin-right: 50px;
-}
-
-.right {
-  list-style-type: disc;
-  margin-left: 50px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-ul li {
-  margin: 10px;
-  font-family: 'Baskerville', serif;
-  font-size: 1.2em;
-  color: #ffffff;
-}
-
-.left-list {
-  flex: 1;
-  border-right: 1px solid #ffd700;
-  padding-right: 20px;
-}
-
-.right-list {
-  flex: 1;
-  padding-left: 20px;
+  
+  .bullet-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .left-list {
+    border: none;
+    padding-right: 0;
+  }
+  
+  .right-list {
+    border: none;
+    padding-left: 0;
+  }
 }
