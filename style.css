@@ -45,13 +45,22 @@ p {
 }
 
 /* Stock Ticker Banner */
-.ticker-wrap {
+#ticker-wrapper {
   height: 50px;
   padding: 5px;
   overflow: hidden;
+  color: white;
+  background-color: #ffd700;
 }
 
-.ticker {
+#stock-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: ticker 15s linear infinite;
+}
+
+#crypto-ticker {
   display: inline-block;
   white-space: nowrap;
   padding-right: 100%;
@@ -61,7 +70,7 @@ p {
 .ticker__item {
   display: inline-block;
   padding-right: 2rem;
-  color: #ffffff;
+  color: #000000;
   font-size: 2rem;
 }
 
@@ -132,7 +141,7 @@ p {
     font-size: 0.6rem;
   }
 
-  .ticker-wrap {
+  #ticker-wrapper {
     height: 30px;
   }
 
