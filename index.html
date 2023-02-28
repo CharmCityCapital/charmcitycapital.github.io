@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Charm City Capital</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
-    <style> 
-        h1 {
-            font-family: 'Rouge Script', cursive;
-            font-size: 3em;
-            margin-top: 0;
-        }
-        
-        h2 {
-            font-family: 'Cinzel Decorative', cursive;
-            font-size: 2em;
-            color: #FFD700;
-            text-align: center;
-            border: 3px solid #FFD700;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-family: 'Baskerville', serif;
-            font-size: 1.2em;
-            color: #FFFFFF;
-            text-align: center;
-        }
-        
-        body {
-            background-color: #000000;
-            margin: 0;
-            padding: 0;
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-        
-        .bottom-left,
-        .bottom-right {
-            position: absolute;
-            margin: 10px;
-            font-size: 0.8em;
-            color: #FFFFFF;
-        }
-        
-        .bottom-left {
-            bottom: 0;
-            left: 0;
-        }
-        
-        .bottom-right {
-            bottom: 0;
-            right: 0;
-        }
-        
-        .bottom-center {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            font-size: 0.7em;
-            color: #FFFFFF;
-        }
-        
-        .disclosure {
-            color: #FFD700;
-            text-decoration: underline;
-        }
+	<title>Charm City Capital</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/favicon.ico">
+	<style> 
+		title {
+			font-family: 'Rouge Script', cursive;
+		}
+		
+		h1, h2 {
+			font-family: 'Cinzel Decorative', cursive;
+			color: #FFD700;
+			text-align: center;
+			border: 3px solid #FFD700;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+		
+		h2 {
+			border: none;
+		}
+		
+		p {
+			font-family: 'Baskerville', serif;
+			font-size: 1.2em;
+			color: #FFFFFF;
+			text-align: center;
+		}
+		
+		body {
+			background-color: #000000;
+			margin: 0;
+			padding: 0;
+			font-size: 1.2em;
+			line-height: 1.5;
+		}
+		
+		.bottom-left {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin: 10px;
+			font-size: 0.8em;
+			color: #FFFFFF;
+		}
+		
+		.bottom-right {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 10px;
+			font-size: 0.8em;
+			color: #FFFFFF;
+		}
+		
+		.bottom-center {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 10px;
+			font-size: 0.8em;
+			color: #FFFFFF;
+		}
+		
+		.disclosure {
+			color: #FFD700;
+			text-decoration: underline;
+		}
+		
+		@media only screen and (max-width: 768px) {
+			h1 {
+				font-size: 2em;
+			}
+			
+			h2 {
+				font-size: 1.5em;
+			}
+			
+			p {
+				font-size: 1em;
+			}
+			
+			.bottom-left, .bottom-right, .bottom-center {
+				font-size: 0.6em;
+			}
+		}
+	</style>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Cinzel+Decorative:wght@700&family=Rouge+Script&display=swap" rel="stylesheet">
 
-        @media only screen and (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            p {
-                font-size: 1em;
-            }
-            
-            .bottom-left,
-            .bottom-right {
-                font-size: 0.7em;
-            }
-            
-            .bottom-center {
-                font-size: 0.5em;
-            }
-        }
-    </style>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Charm City Capital</h1>
@@ -106,4 +102,5 @@
     <div class="bottom-left">Operating from Brooklyn, Baltimore, since 2022.</div>
     <div class="bottom-right"><a href="https://adviserinfo.sec.gov/firm/summary/324353" class="disclosure">Public Disclosure</a></div>
 </body>
-</html
+</html>
+
