@@ -1,24 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cinzel+Decorative:wght@400;700;900&family=Rouge+Script&display=swap');
 
-title {
-  font-family: 'Rouge Script', cursive;
+/* Global Styles */
+:root {
+  --primary-color: #ffd700;
+  --background-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  background-color: #000000;
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;
+  background-color: var(--background-color);
+  font-size: 1.2rem;
   line-height: 1.5;
   font-family: 'Baskerville', serif;
 }
 
+/* Typography */
 h1,
 h2 {
   font-family: 'Cinzel Decorative', cursive;
-  color: #ffd700;
+  color: var(--primary-color);
   text-align: center;
-  border: 3px solid #ffd700;
+  border: 3px solid var(--primary-color);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -28,17 +39,48 @@ h2 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #ffffff;
   text-align: center;
 }
 
+/* Stock Ticker Banner */
+.ticker-wrap {
+  height: 50px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: ticker 15s linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding-right: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Bottom Navigation */
 .bottom-left {
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 10px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: #ffffff;
 }
 
@@ -47,7 +89,7 @@ p {
   bottom: 0;
   right: 0;
   margin: 10px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: #ffffff;
 }
 
@@ -57,34 +99,47 @@ p {
   left: 50%;
   transform: translateX(-50%);
   margin: 10px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: #ffffff;
 }
 
 .disclosure {
-  color: #ffd700;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
+/* Responsive Styles */
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 1em;
+  html {
+    font-size: 50%;
   }
+
   h1 {
-    font-size: 2em;
+    font-size: 3rem;
   }
+
   h2 {
-    font-size: 1.5em;
+    font-size: 2.5rem;
   }
+
   p {
-    font-size: 1em;
+    font-size: 1rem;
   }
+
   .bottom-left,
   .bottom-right,
   .bottom-center {
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
-  
+
+  .ticker-wrap {
+    height: 30px;
+  }
+
+  .ticker__item {
+    font-size: 1.5rem;
+  }
+
   .bullet-container {
     display: flex;
     flex-direction: column;
@@ -92,7 +147,7 @@ p {
     align-items: center;
     margin: 50px 0;
   }
-  
+
   .left-list {
     border: none;
     padding-right: 0;
