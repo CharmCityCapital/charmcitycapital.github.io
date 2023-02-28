@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskerville:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Cinzel+Decorative:wght@700&family=Rouge+Script&display=swap');
+
+title {
+  font-family: 'Rouge Script', cursive;
+}
 
 body {
   background-color: #000000;
