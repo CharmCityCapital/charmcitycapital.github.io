@@ -6,8 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="assets/favicon.ico">
-	<script src="https://cdn.jsdelivr.net/npm/yfinance@0.1.63/dist/browser/yfinance.umd.js"></script>
-	<script src="ticker.js"></script>
 </head>
 <body>
 	<div class="ticker-wrap">
@@ -37,5 +35,32 @@
 			<li>4B</li>
 		</ul>
 	</div>
+	<!-- Python script for price ticker -->
+	<script type="text/python">
+		import yfinance as yf
+		import requests
+		import json
+
+		stock_ticker = document.getElementById("stock-ticker")
+		crypto_ticker = document.getElementById("crypto-ticker")
+
+		def update_ticker():
+		    # Fetch stock data using yfinance
+		    symbols = ['TROW', 'MKC', 'UA', 'ENOV', 'LAUR']
+		    data = yf.download(symbols, start="2023-02-25", end="2023-02-25")
+		    prices = data['Close'].iloc[-1]
+		    stock_data = " | ".join([f"{symbol}: {price:.2f}" for symbol, price in prices.items()])
+		    stock_ticker.innerText = stock_data
+
+		    # Fetch crypto data from SimpleSwap API
+		    response = requests.get("https://api.simpleswap.io/v1/ticker")
+		    data = json.loads(response.text)
+		    cryptos = ["BTC", "ETH", "LTC", "XMR", "DOGE"]
+		    crypto_data = " | ".join([f"{crypto}: {data[crypto.upper()]['rate']:.2f}" for crypto in cryptos])
+		    crypto_ticker.innerText = crypto_data
+
+		# Update ticker every 5 seconds
+		setInterval(update_ticker, 5000);
+	</script>
 </body>
 </html>
