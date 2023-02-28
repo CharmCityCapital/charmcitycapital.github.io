@@ -2,17 +2,19 @@ const stockTicker = document.getElementById("stock-ticker");
 const cryptoTicker = document.getElementById("crypto-ticker");
 
 function updateTicker() {
-  // Fetch stock data from Yahoo Finance API
-  fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?region=US&symbols=TROW,MKC,UA,ENOV,LAUR")
-    .then(response => response.json())
-    .then(data => {
-      // Update stock ticker with new data
-      const stocks = data.quoteResponse.result;
-      stockTicker.innerText = stocks.map(stock => `${stock.symbol}: ${stock.regularMarketPrice}`).join(" | ");
-    })
-    .catch(error => {
-      console.error(error);
-    });
+  // Fetch stock data using yfinance
+  const symbols = ['TROW', 'MKC', 'UA', 'ENOV', 'LAUR'];
+  const dataPromise = yf.download(symbols, {module: 'quote', interval: '1d', period: '1d'})
+  
+  // Update stock ticker with new data
+  dataPromise.then(data => {
+    const prices = data['quote']['regularMarketPrice'];
+    const stockData = Object.entries(prices).map(([symbol, price]) => `${symbol}: ${price}`).join(' | ');
+    stockTicker.innerText = stockData;
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
   // Fetch crypto data from SimpleSwap API
   fetch("https://api.simpleswap.io/v1/ticker")
