@@ -1,67 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Charm City Capital</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="assets/favicon.ico">
-	<script src="ticker.py"></script>
-</head>
-<body>
-	<div class="ticker-wrap">
-		<div id="stock-ticker"></div>
-		<div id="crypto-ticker"></div>
-	</div>
-	<h1>Charm City Capital</h1>
-	<h2>A Baltimore Fiduciary</h2>
-	<div class="bottom-center">
-		<p>This website was created by ChatGPT.</p>
-	</div>
-	<div class="bottom-left">Operating from Brooklyn, Baltimore, since 2022.</div>
-	<div class="bottom-right">
-		<a href="https://adviserinfo.sec.gov/firm/summary/324353" class="disclosure">Public Disclosure</a>
-	</div>
-	<div class="bullet-container">
-		<ul class="bullet-list left">
-			<li>1A</li>
-			<li>2A</li>
-			<li>3A</li>
-			<li>4A</li>
-		</ul>
-		<ul class="bullet-list right">
-			<li>1B</li>
-			<li>2B</li>
-			<li>3B</li>
-			<li>4B</li>
-		</ul>
-	</div>
-	<!-- Python script for price ticker -->
-	<script type="text/python">
-		import yfinance as yf
-		import requests
-		import json
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Charm City Capital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="static/assets/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head
+    <body>
+        <h2>From Baltimore, for Baltimore.</h2>
+<div class="top-bar">
+  <p><img src="https://i.imgur.com/nOyY5gB.png" alt="Charm City Capital Logo" class="logo"></p>
+</div>
 
-		stock_ticker = document.getElementById("stock-ticker")
-		crypto_ticker = document.getElementById("crypto-ticker")
+<!-- Calendly link widget begin -->
+<style>
+.calendly-link {
+  display: block;
+  text-align: center;
+  color: #FFD700;
+}
+</style>
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a class="calendly-link" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/charmcitycapital/free-consultation?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=cccccc&primary_color=ffd700'});return false;">Click here for a VIP financial consultation.</a>
+<!-- Calendly link widget end --> 
+    </form>
+        <div style="height: 5px;"></div>
+        
+<p style="text-align: center;"><br> Let us help you achieve your financial goals with personalized and transparent <br> investment strategies.  Personalized portfolios starting at $5000 under management.<br><br>Account minimum requirement is waived for residents<br> of Baltimore City and US military veterans.</p> <br>
 
-		def update_ticker():
-		    # Fetch stock data using yfinance
-		    symbols = ['TROW', 'MKC', 'UA', 'ENOV', 'LAUR']
-		    data = yf.download(symbols, start="2023-02-25", end="2023-02-25")
-		    prices = data['Close'].iloc[-1]
-		    stock_data = " | ".join([f"{symbol}: {price:.2f}" for symbol, price in prices.items()])
-		    stock_ticker.innerText = stock_data
 
-		    # Fetch crypto data from SimpleSwap API
-		    response = requests.get("https://api.simpleswap.io/v1/ticker")
-		    data = json.loads(response.text)
-		    cryptos = ["BTC", "ETH", "LTC", "XMR", "DOGE"]
-		    crypto_data = " | ".join([f"{crypto}: {data[crypto.upper()]['rate']:.2f}" for crypto in cryptos])
-		    crypto_ticker.innerText = crypto_data
 
-		# Update ticker every 5 seconds
-		setInterval(update_ticker, 5000);
-	</script>
-</body>
+
+        <div style="height: 20px;"></div> 
+
+<iframe style="border: none; text-align: center; width:100%; height: 373px;" data-widget-name="" name="TickerTape" src="https://darqube.com/external-embedding/ticker-tape?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3aWRnZXQiOnsiYXNzZXRfY2xhc3NlcyI6WyJJTkRFWEVTIiwiU1RPQ0tTIiwiRk9SRVgiXX0sIndfdHlwZSI6IlRpY2tlclRhcGUiLCJmZV9jZmciOnsiY21vZGUiOjAsImZjbHIiOiJyZ2JhKDI1NSwgMjU1LCAyNTUsIDEpIiwiYmciOiJyZ2JhKDIxLCAyNSwgMzAsIDEpIiwiaCI6MzczLCJ3IjoxMTAwLCJhc3oiOnRydWUsImZ0IjoiZGVmYXVsdCIsImh0Ijoibm9uZSIsInRyaCI6W10sImNoYyI6InJnYmEoMjM3LCA1MCwgOTgsIDEpIiwiYmUiOmZhbHNlLCJiYyI6InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIsImJ3IjoxLCJjbiI6IiIsImxuZyI6ImVuIiwiY3RybHQiOjEsImhkaWNuIjpmYWxzZSwid3RtViI6eyJ0eXBlIjoiRGFycXViZSIsImVuYWJsZWQiOnRydWV9LCJ1YyI6InJnYmEoNDgsIDEzMSwgMTA5LCAxKSIsImRjIjoicmdiYSgyMzcsIDUwLCA5OCwgMSkiLCJjdHJsdiI6MSwic21iIjpbeyJuIjoiQml0Y29pbiIsInQiOiJCVENVU0QuQUdSIn0seyJuIjoiRXRoZXJldW0iLCJ0IjoiRVRIVVNELkFHUiJ9LHsibiI6Ik1vbmVybyIsInQiOiJYTVJVU0QuQUdSIn0seyJuIjoiRG9nZWNvaW4iLCJ0IjoiRE9HRVVTRC5BR1IifSx7Im4iOiJFbm92aXMgQ29ycCIsInQiOiJFTk9WLlVTIn0seyJuIjoiTWNDb3JtaWNrICYgQ29tcGFueSBJbmNvcnBvcmF0ZWQiLCJ0IjoiTUtDLlVTIn0seyJuIjoiTGF1cmVhdGUgRWR1Y2F0aW9uIEluYyIsInQiOiJMQVVSLlVTIn0seyJuIjoiVW5kZXIgQXJtb3VyIEluYyBDIiwidCI6IlVBLlVTIn1dLCJvcG4iOnRydWUsImN0ZGMiOmZhbHNlfSwiZXhwIjoxNjg1NDc0NjI5LCJzdWIiOiJhY2Nlc3MifQ.XOi-T__C10fVfDxO1ZoQEIjgi_rf9CeOHEHw30e6O4k" id="TickerTape-5pgdr6e"></iframe>
+
+
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/charmcitycapital/free-consultation?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=cccccc&primary_color=ffd700', text: 'Free Advice Session', color: '#ffd700', textColor: '#000000', branding: true }); }</script>
+<!-- Calendly badge widget end -->
+
+    <div class="top-bar">
+        <p style="text-align: center;"><img src="https://i.imgur.com/ckRLz51.jpg" alt="Charm City" class="logo">
+    </div>
+
+
+        <div class="bottom-left"> <a href="https://adviserinfo.sec.gov/firm/summary/324353" class="disclosure">Public Disclosure</a> Licensed, bonded & insured. Fiduciary.</div>
+        
+ 
+    </body>
 </html>
