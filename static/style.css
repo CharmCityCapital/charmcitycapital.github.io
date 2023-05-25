@@ -20,9 +20,9 @@ body {
   background-color: var(--background-color);
   font-size: 1.2rem;
   line-height: 1.5;
-  font-family: 'Baskerville', serif;
+  font-family: Arial, sans-serif; /* Update the font family */
+  color: #ffffff; /* Update the font color */
 }
-
 
 /* Charm City Logo */
 .top-bar {
@@ -54,7 +54,6 @@ h2 {
 h2 {
   border: none;
 }
-
 
 p {
   font-size: 1.2rem;
