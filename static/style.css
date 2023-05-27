@@ -126,3 +126,19 @@ p {
     font-size: 0.6rem;
   }
 }
+
+
+/* Instagram Embed and Text Box */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.embed-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.text-box {
+  flex: 1;
+}
