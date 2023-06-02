@@ -140,5 +140,6 @@ p {
 }
 
 .text-box {
+  text-align: left;
   flex: 1;
 }
