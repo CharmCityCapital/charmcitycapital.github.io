@@ -144,7 +144,4 @@ p {
   flex: 1;
 }
 
-/* Add space to the left-aligned part */
-.left-aligned {
-   padding-left: 20px;
-}
+
