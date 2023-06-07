@@ -131,7 +131,7 @@ p {
 /* Instagram Embed and Text Box */
 .content-wrapper {
   display: flex;
-  align-items: center;
+  align-items: right;
 }
 
 .embed-container {
